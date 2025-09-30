@@ -1,0 +1,18 @@
+# Optional dependencies (recommended for full functionality)
+# The program will work without these, but with reduced features
+
+# For YAML configuration file support
+# Without this: only JSON configs are supported
+pyyaml>=6.0
+
+# For progress bars during processing
+# Without this: simple text progress is shown
+tqdm>=4.65.0
+
+# Development dependencies (optional, for contributors)
+# Install with: pip install -r requirements.txt[dev]
+pytest>=7.4.0
+pytest-cov>=4.1.0
+black>=23.7.0
+flake8>=6.1.0
+mypy>=1.5.0

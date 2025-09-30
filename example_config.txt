@@ -1,0 +1,97 @@
+# ChordPro Processor Configuration Example
+# Copy this file to config.yaml and customize as needed
+
+# ============================================================================
+# NETWORK SETTINGS
+# ============================================================================
+
+# Base URL for JEMAF ChordPro files
+jemaf_base_url: "https://jemaf.fr/ressources/chordPro/"
+
+# URL for CSV metadata file
+csv_url: "https://raw.githubusercontent.com/bricedupuy/jemaf_chordpro_enhancer/refs/heads/main/custom-metadata.csv"
+
+# Connection timeout in seconds
+connection_timeout: 30
+
+# Maximum number of retry attempts for failed downloads
+max_retries: 3
+
+# Delay between retries in seconds
+retry_delay: 1.0
+
+# ============================================================================
+# OUTPUT DIRECTORIES
+# ============================================================================
+
+# Default output directory for enhanced ChordPro files
+default_chordpro_output: "processedChordPro"
+
+# Default output directory for FreeShow files
+default_freeshow_output: "processedFreeShow"
+
+# ============================================================================
+# PROCESSING OPTIONS
+# ============================================================================
+
+# Apply French punctuation rules (non-breaking spaces)
+fix_french_punctuation: true
+
+# Remove duplicate sections in songs
+deduplicate_sections: true
+
+# ============================================================================
+# FREESHOW SLIDE STYLING
+# ============================================================================
+
+# Default font size for lyrics (in pixels)
+font_size: 100
+
+# Default slide style (CSS-like positioning)
+slide_style: "top:120px;left:50px;height:840px;width:1820px;"
+
+# ============================================================================
+# SECTION COLORS
+# Color codes for different section types in FreeShow
+# Use empty string "" for no color
+# ============================================================================
+
+section_colors:
+  verse: ""                # Verses have no special color
+  chorus: "#f525d2"        # Pink for chorus
+  bridge: "#f52598"        # Darker pink for bridge
+  pre_chorus: "#25d2f5"    # Cyan for pre-chorus
+  tag: "#f5d225"           # Yellow for tag/coda
+  intro: ""                # No color for intro
+  outro: ""                # No color for outro
+
+# ============================================================================
+# GLOBAL GROUPS
+# Mapping of section types to FreeShow global groups
+# ============================================================================
+
+global_groups:
+  verse: "verse"
+  chorus: "chorus"
+  bridge: "bridge"
+  pre_chorus: "pre_chorus"
+  tag: "tag"
+  intro: "intro"
+  outro: "outro"
+
+# ============================================================================
+# LABEL TO TYPE MAPPING
+# Maps French/English section labels to standardized types
+# ============================================================================
+
+label_to_type_map:
+  refrain: "chorus"
+  chorus: "chorus"
+  strophe: "verse"
+  verse: "verse"
+  pont: "bridge"
+  bridge: "bridge"
+  introduction: "intro"
+  intro: "intro"
+  fin: "outro"
+  outro: "outro"
